@@ -169,6 +169,10 @@ html {
     width: 100%;
   }
 
+  .nav__item__link {
+    font-size: 20px;
+  }
+
   .section-title {
     font-size: 52px;
     line-height: 50px;
@@ -180,13 +184,40 @@ html {
   }
 
   .portfolio__box {
-    width: calc(100% - 30px);
-    margin-top: 30px;
+    margin-left: -20px;
+    padding: 20px;
+    width: calc(100% + -40px + 40px);
+    margin-top: 40px;
+  }
+
+  .portfolio__box:hover {
+    transform: scale(1);
+  }
+
+  .portfolio__box__title {
+    font-size: 22px;
+  }
+
+  .portfolio__box__description {
+    font-size: 20px;
+  }
+
+  .portfolio__box__links {
+    margin-top: 14px;
+  }
+
+  .portfolio__box__link {
+    font-size: 18px;
+    padding: 5px 8px 8px 8px;
   }
 
   .contact__list {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .contact__list__item__title {
+    font-size: 20px;
   }
 
   .contact__list__item__link {
