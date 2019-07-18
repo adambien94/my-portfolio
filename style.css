@@ -157,7 +157,6 @@ html {
   position: absolute;
   top: 0;
   height: 108%;
-  border: 1px solid red;
   left: calc(100% + 4px);
 }
 
