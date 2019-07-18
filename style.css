@@ -69,9 +69,9 @@ html {
 }
 
 .nav__more {
-  font-size: 21px;
-  font-weight: 300;
+  font-size: 32px;
   color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
   position: absolute;
   bottom: 90px;
   left: 50%;
@@ -86,13 +86,13 @@ html {
 .nav__more:after {
   content: ">";
   color: rgba(0, 0, 0, 0.6);
-  font-size: 20px;
-  height: 20px;
-  line-height: 20px;
+  font-size: 32px;
+  height: 32px;
+  line-height: 32px;
   display: block;
   position: absolute;
   bottom: 0px;
-  right: -18px;
+  right: -26px;
   transform: rotate(90deg);
 }
 
@@ -149,6 +149,16 @@ html {
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
+  position: relative;
+}
+
+.portfolio-box__title__img {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 108%;
+  border: 1px solid red;
+  left: calc(100% + 4px);
 }
 
 .portfolio__box__description {
