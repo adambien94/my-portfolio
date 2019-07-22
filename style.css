@@ -6,7 +6,8 @@
 body,
 html {
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Palanquin", sans-serif;
   background: #fcfcfc;
 }
 
@@ -65,7 +66,7 @@ html {
 }
 
 .nav__item:nth-child(1) {
-  border-bottom: 4px solid lightgray;
+  border-bottom: 6px solid lightgray;
 }
 
 .nav__more {
@@ -114,7 +115,7 @@ html {
 .section-title {
   font-size: 62px;
   color: rgba(0, 0, 0, 0.9);
-  line-height: 60px;
+  line-height: 56px;
   margin-bottom: 60px;
 }
 
@@ -131,12 +132,11 @@ html {
 }
 
 .portfolio__box {
-  width: 44%;
+  width: 45%;
   background: #fff;
   margin: 20px 0;
   padding: 15px;
   box-shadow: 0 0 44px rgba(0, 0, 0, 0.075);
-  border-radius: 3px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -155,13 +155,13 @@ html {
 .portfolio-box__title__img {
   display: block;
   position: absolute;
+  height: 100%;
   top: 0;
-  height: 108%;
   left: calc(100% + 4px);
 }
 
 .portfolio__box__description {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .portfolio__box__links {
@@ -196,27 +196,24 @@ html {
 
 .contact__list {
   width: 50%;
-  margin-left: 30%;
+  margin: 0 auto;
   list-style: none;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .contact__list__item {
   margin-top: 28px;
-}
-
-.contact__list__item__title {
-  line-height: 20px;
-  display: block;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 44px rgba(0, 0, 0, 0.075);
 }
 
 .contact__list__item__link {
   font-size: 32px;
-  line-height: 32px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
   font-family: "IBM Plex Mono";
-  color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
@@ -295,11 +292,7 @@ html {
     margin: 0 auto;
   }
 
-  .contact__list__item__title {
-    font-size: 19px;
-  }
-
   .contact__list__item__link {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
