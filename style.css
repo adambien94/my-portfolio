@@ -3,11 +3,38 @@
   padding: 0;
 }
 
-body,
-html {
+:root {
   font-size: 18px;
   font-family: "Palanquin", sans-serif;
-  background: #fcfcfc;
+  --main-font: #000;
+  --lighter-font: rgba(0, 0, 0, 0.9);
+  --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.05), #fff);
+  --shadow: rgba(0, 0, 0, 0.075);
+  --body-bg: #fcfcfc;
+  --box: #fff;
+  --active-border: lightgray;
+}
+
+:root[data-theme="dark"] {
+  --main-font: #fff;
+  --lighter-font: rgba(255, 255, 255, 0.75);
+  --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.08), #1f2428);
+  --shadow: rgba(0, 0, 0, 0);
+  --body-bg: #1f2428;
+  --box: rgba(255, 255, 255, 0.05);
+  --active-border: rgba(255, 255, 255, 0.2);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 600ms !important;
+  transition-delay: 0 !important;
+}
+
+body {
+  background: var(--body-bg);
 }
 
 .container {
@@ -19,22 +46,9 @@ html {
   overflow: hidden;
 }
 
-.header {
-  /* background: linear-gradient(to right, rgba(119, 136, 153, 0.1), #fff); */
-  /* clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%); */
-  height: 290px;
-  position: relative;
-  /* padding-top: 40px; */
-  transition: 0.2s;
-}
-
-/* .header:hover {
-  height: calc(100vh - 40px);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-} */
-
-.my-svg {
+.nav {
   position: absolute;
+  width: 100%;
 }
 
 .nav__menu {
@@ -47,38 +61,37 @@ html {
 .nav__item {
   margin-left: 60px;
   position: relative;
-  transition: 0.2s;
 }
 
 .nav__item:nth-child(1):after,
 .nav__item:nth-child(2):after {
   content: ">";
+  color: var(--main-font);
   position: absolute;
   display: block;
   top: 3px;
   right: -42px;
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.6);
   font-weight: 100;
 }
 
 .nav__item__link {
   text-decoration: none;
-  color: rgba(0, 0, 0, 1);
+  color: var(--main-font);
   font-size: 32px;
   font-weight: 100;
 }
 
 .nav__item:nth-child(1) {
-  border-bottom: 6px solid lightgray;
+  border-bottom: 6px solid var(--active-border);
 }
 
 .nav__more {
   font-size: 32px;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--main-font);
   font-weight: 400;
   position: absolute;
-  bottom: 90px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   border: none;
@@ -90,7 +103,7 @@ html {
 
 .nav__more:after {
   content: ">";
-  color: rgba(0, 0, 0, 1);
+  color: var(--main-font);
   font-size: 32px;
   height: 32px;
   line-height: 32px;
@@ -101,11 +114,67 @@ html {
   transform: rotate(90deg);
 }
 
+.nav__modes {
+  width: 110px;
+  height: 80px;
+  position: relative;
+  left: 100%;
+  transform: translate(-100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__modes__icon {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.nav__modes__trigger {
+  display: none;
+}
+
+.slider {
+  display: block;
+  width: 36px;
+  height: 17px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, background-color 0.2s;
+  left: -1px;
+  top: -1px;
+}
+
+input[name="trigger"]:checked + .slider {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[name="trigger"]:checked + .slider:before {
+  transform: translateX(calc(36px - 100% + 2px));
+}
+
+input[name="trigger"]:focus + .slider:before {
+  background: red;
+  box-shadow: 0 0 15px red;
+}
+
 .about-me {
   position: absolute;
   width: 85%;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.6);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -100%);
@@ -118,7 +187,7 @@ html {
 
 .section-title {
   font-size: 62px;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--main-font);
   line-height: 58px;
   margin-bottom: 60px;
 }
@@ -138,19 +207,21 @@ html {
 
 .portfolio__box {
   width: 45%;
-  background: #fff;
+  background: var(--box);
   margin: 20px 0;
   padding: 15px;
-  box-shadow: 0 0 44px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 4px 44px var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
 }
 
 .portfolio__box:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 44px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 8px 44px var(--shadow);
 }
 
 .portfolio__box__title {
+  color: var(--main-font);
   font-size: 22px;
   line-height: 20px;
   font-weight: bold;
@@ -166,7 +237,7 @@ html {
 }
 
 .portfolio__box__description {
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--lighter-font);
 }
 
 .portfolio__box__links {
@@ -178,17 +249,18 @@ html {
   font-family: "IBM Plex Mono";
   font-size: 18px;
   line-height: 20px;
-  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  /* color: #fff;
-  background: linear-gradient(to right, lightslategrey, lightslategray); */
-  color: lightslategray;
+  color: var(--main-font);
   border-radius: 2px;
   font-weight: 400;
   padding: 3px 0px 6px 0px;
   transition: transform 0.15s;
-  /* box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); */
+}
+
+.slash {
+  color: var(--main-font);
+  padding: 0 3px;
 }
 
 .portfolio__box__link:hover {
@@ -198,7 +270,7 @@ html {
 
 .contact {
   clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
-  background: linear-gradient(to right, rgba(119, 136, 153, 0.1), #fff);
+  background: var(--contact-bg);
   padding-top: 160px;
 }
 
@@ -212,15 +284,15 @@ html {
 
 .contact__list__item {
   margin-top: 28px;
-  background: #fff;
+  background: var(--box);
   padding: 15px;
-  box-shadow: 0 2px 44px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 4px 44px rgba(0, 0, 0, 0.05);
 }
 
 .contact__list__item__link {
   font-size: 32px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--lighter-font);
   font-family: "IBM Plex Mono";
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,49 +15,54 @@
 </head>
 
 <body>
-  <header class="header">
-    <svg viewBox="0 0 459 93" fill="none" class="my-svg">
-      <!-- <defs>
-        <linearGradient id="myGradient">
-          <stop offset="5%" stop-color="rgba(119, 136, 153, 0.1)" />
-          <stop offset="95%" stop-color="#fff" />
-        </linearGradient>
-      </defs> -->
-      <path
+  <!-- <svg width="100%" height="100%" viewBox="0 0 459 93" preserveAspectRatio="none" class="my-svg">
+      <path class="pr"
         d="M0 0H459V46L416.856 64.6826C381.248 80.4672 341.482 84.2764 303.526 75.5383L269.153 67.6252C238.899 60.6602 207.358 61.6386 177.594 70.4652L129.031 84.8665C95.7234 94.7441 60.2685 94.7715 26.9452 84.9454L0 77V0Z"
         fill="rgba(0,0,0,0.03)" />
-    </svg>
+    </svg> -->
 
 
+  <nav class="nav">
     <div class="container">
-      <nav class="nav">
-        <ul class="nav__menu">
-          <li class="nav__item">
-            <a href="#" class="nav__item__link">o mnie</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__item__link">projekty</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__item__link">kontakt</a>
-          </li>
-        </ul>
-        <button class="nav__more">o mnie</button>
-      </nav>
-      <div class="about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur modi fugiat
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="#" class="nav__item__link">o mnie</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__item__link">projekty</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__item__link">kontakt</a>
+        </li>
+      </ul>
+      <button class="nav__more" id="more-btn">o mnie</button>
+      <div class="nav__modes">
+        <div class="nav__modes__icon">🌝</div>
+        <label for="trigger">
+          <input type="checkbox" name="trigger" class="nav__modes__trigger" id="trigger">
+          <div class="slider"></div>
+        </label>
+        <div class="nav__modes__icon">🌙</div>
+      </div>
+    </div>
+  </nav>
+  <!-- <div class="about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur modi fugiat
         eum
         sequi, perspiciatis veniam adipisci iste aperiam illum deserunt eaque voluptatem ducimus velit minima nesciunt
-        quod. Doloremque, quae?</div>
-    </div>
-  </header>
-
+        quod. Doloremque, quae?</div> -->
 
   <section class="section portfolio">
     <div class="container">
       <h1 class="section-title">Moje<br />projekty ></h1>
       <ul class="portfolio__list">
         <li class="portfolio__box">
-          <span class="portfolio__box__title">Diet-Tracker<img class="portfolio-box__title__img" src="./img/diet.jpg"
+          <!-- <svg viewBox="0 0 459 147" fill="none" class="test">
+            <path
+              d="M0 0H459L426.628 138.009C424.857 145.556 414.463 146.426 411.462 139.278L395.303 100.781C378.942 61.802 324.183 60.5149 306.009 98.6817V98.6817C304.665 101.503 300.779 101.827 298.987 99.2669L289.12 85.1716C262.628 47.3252 205.097 52.3606 185.582 94.2338L164.12 140.285C160.368 148.336 148.764 147.863 145.679 139.533L119.696 69.3789C110.538 44.6523 75.8017 44.0019 65.7243 68.3682V68.3682C54.5859 95.2997 15.1337 90.8024 10.3425 62.055L0 0Z"
+              fill="#C4C4C4" fill-opacity="0.3" />
+          </svg> -->
+
+          <span class="portfolio__box__title">Diet-Tracker<img class="portfolio-box__title__img" src="./img/diet.png"
               alt=""></span>
           <p class="portfolio__box__description">
             aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
@@ -70,7 +75,7 @@
           </div>
         </li>
         <li class="portfolio__box">
-          <span class="portfolio__box__title">RWD-Site<img class="portfolio-box__title__img" src="./img/rwd.jpg"
+          <span class="portfolio__box__title">RWD-Site<img class="portfolio-box__title__img" src="./img/rwd.png"
               alt=""></span>
           <p class="portfolio__box__description">
             klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
@@ -84,7 +89,7 @@
           </div>
         </li>
         <li class="portfolio__box">
-          <span class="portfolio__box__title">Weather-App<img class="portfolio-box__title__img" src="./img/weather.jpg"
+          <span class="portfolio__box__title">Weather-App<img class="portfolio-box__title__img" src="./img/weather.png"
               alt=""></span>
           <p class="portfolio__box__description">
             aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
@@ -99,7 +104,7 @@
           </div>
         </li>
         <li class="portfolio__box">
-          <span class="portfolio__box__title">Brick-Breaker<img class="portfolio-box__title__img" src="./img/game2.jpg"
+          <span class="portfolio__box__title">Brick-Breaker<img class="portfolio-box__title__img" src="./img/game2.png"
               alt=""></span>
           <p class="portfolio__box__description">
             klasyczna gra stworzona za pomocą biblioteki p5.js, coś tu będzie
@@ -114,7 +119,7 @@
         </li>
         <li class="portfolio__box">
           <span class="portfolio__box__title">Messenger-Soccer <img class="portfolio-box__title__img"
-              src="./img/soccer.jpg" alt=""></span>
+              src="./img/soccer.png" alt=""></span>
           <p class="portfolio__box__description">
             klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
             nie wiedziała jak
@@ -148,6 +153,8 @@
     </div>
   </section>
 
+  <script src="./anime.min.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
