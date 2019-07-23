@@ -38,6 +38,11 @@ body {
   background: var(--body-bg);
 }
 
+.my-svg {
+  position: absolute;
+  z-index: -1;
+}
+
 .container {
   width: 100%;
   max-width: 1160px;
@@ -92,13 +97,12 @@ body {
   color: var(--main-font);
   font-weight: 400;
   position: absolute;
-  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   border: none;
   outline: none;
   background: transparent;
-  border-bottom: 4px solid lightgray;
+  border-bottom: 4px solid var(--active-border);
   display: none;
 }
 
@@ -326,6 +330,7 @@ input[name="trigger"]:focus + .slider:before {
 
   .nav__more {
     display: block;
+    bottom: 90px;
     font-size: 21px;
   }
 
