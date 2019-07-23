@@ -1,3 +1,26 @@
+const modeTrigger = document.getElementById("trigger");
+const rootDoc = document.documentElement;
+const themeColorMeta = document.querySelector("meta[name=theme-color]");
+
+trigger.addEventListener("click", () => {
+  if (trigger.checked === true) {
+    trans();
+    rootDoc.setAttribute("data-theme", "dark");
+    themeColorMeta.setAttribute("content", "#1f2428");
+  } else {
+    trans();
+    rootDoc.setAttribute("data-theme", "light");
+    themeColorMeta.setAttribute("content", "#fcfcfc");
+  }
+});
+
+let trans = () => {
+  rootDoc.classList.add("transition");
+  window.setTimeout(() => {
+    rootDoc.classList.remove("transition");
+  }, 750);
+};
+
 // const moreBtn = document.getElementById("more-btn");
 
 // const mySvg = document.querySelector(".my-svg");
@@ -24,22 +47,3 @@
 //     ]
 //   });
 // });
-const modeTrigger = document.getElementById("trigger");
-const doc = document.documentElement;
-
-trigger.addEventListener("click", () => {
-  if (trigger.checked === true) {
-    trans();
-    doc.setAttribute("data-theme", "dark");
-  } else {
-    trans();
-    doc.setAttribute("data-theme", "light");
-  }
-});
-
-let trans = () => {
-  doc.classList.add("transition");
-  window.setTimeout(() => {
-    doc.classList.remove("transition");
-  }, 750);
-};
