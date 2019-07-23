@@ -6,8 +6,9 @@
 :root {
   font-size: 18px;
   font-family: "Palanquin", sans-serif;
-  --main-font: #000;
-  --lighter-font: rgba(0, 0, 0, 0.9);
+  --main-font: rgba(0, 0, 0, 0.9);
+  --lighter-font: rgba(0, 0, 0, 0.8);
+  --heading: rgba(0, 0, 0, 0.85);
   --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.05), #fff);
   --shadow: rgba(0, 0, 0, 0.075);
   --body-bg: #fcfcfc;
@@ -16,8 +17,9 @@
 }
 
 :root[data-theme="dark"] {
-  --main-font: #fff;
+  --main-font: rgba(255, 255, 255, 0.9);
   --lighter-font: rgba(255, 255, 255, 0.75);
+  --heading: rgba(255, 255, 255, 0.85);
   --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.08), #1f2428);
   --shadow: rgba(0, 0, 0, 0);
   --body-bg: #1f2428;
@@ -27,9 +29,8 @@
 
 html.transition,
 html.transition *,
-html.transition *:before,
 html.transition *:after {
-  transition: all 600ms !important;
+  transition: background-color 600ms !important;
   transition-delay: 0 !important;
 }
 
@@ -91,7 +92,7 @@ body {
   color: var(--main-font);
   font-weight: 400;
   position: absolute;
-  top: 30px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   border: none;
@@ -115,7 +116,7 @@ body {
 }
 
 .nav__modes {
-  width: 110px;
+  width: 120px;
   height: 80px;
   position: relative;
   left: 100%;
@@ -152,10 +153,15 @@ body {
   height: 19px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-out, box-shadow 0.05s;
+  transition-delay: 0.1s;
   left: -1px;
   top: -1px;
+}
+
+.slider:hover:before {
+  box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0.08);
 }
 
 input[name="trigger"]:checked + .slider {
@@ -169,6 +175,10 @@ input[name="trigger"]:checked + .slider:before {
 input[name="trigger"]:focus + .slider:before {
   background: red;
   box-shadow: 0 0 15px red;
+}
+
+#trigger:focus + .slider {
+  background: red;
 }
 
 .about-me {
@@ -187,7 +197,7 @@ input[name="trigger"]:focus + .slider:before {
 
 .section-title {
   font-size: 62px;
-  color: var(--main-font);
+  color: var(--heading);
   line-height: 58px;
   margin-bottom: 60px;
 }
@@ -251,7 +261,7 @@ input[name="trigger"]:focus + .slider:before {
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--main-font);
+  color: lightslategray;
   border-radius: 2px;
   font-weight: 400;
   padding: 3px 0px 6px 0px;
@@ -305,6 +315,11 @@ input[name="trigger"]:focus + .slider:before {
     width: 100%;
   }
 
+  .nav {
+    position: relative;
+    height: 220px;
+  }
+
   .nav__menu {
     display: none;
   }
@@ -318,6 +333,10 @@ input[name="trigger"]:focus + .slider:before {
     font-size: 21px;
     top: -2px;
     right: -16px;
+  }
+
+  .slider:hover:before {
+    box-shadow: 0 0 0px 10px rgba(0, 0, 0, 0.08);
   }
 
   .section {
