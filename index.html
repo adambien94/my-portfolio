@@ -1,167 +1,259 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#fcfcfc" />
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Palanquin:100,200,300,400,500,600,700&display=swap"
-    rel="stylesheet">
-  <title>Portfolio</title>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:100,300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Palanquin:100,200,300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
 
-<body>
-  <!-- <svg width="100%" height="100%" viewBox="0 0 459 93" preserveAspectRatio="none" class="my-svg">
+  <body>
+    <!-- <svg width="100%" height="100%" viewBox="0 0 459 93" preserveAspectRatio="none" class="my-svg">
       <path class="pr"
         d="M0 0H459V46L416.856 64.6826C381.248 80.4672 341.482 84.2764 303.526 75.5383L269.153 67.6252C238.899 60.6602 207.358 61.6386 177.594 70.4652L129.031 84.8665C95.7234 94.7441 60.2685 94.7715 26.9452 84.9454L0 77V0Z"
         fill="rgba(0,0,0,0.03)" />
     </svg> -->
 
-
-  <nav class="nav">
-    <svg width="100%" height="240px" viewBox="0 0 459 93" preserveAspectRatio="none" class="my-svg">
-      <path class="pr"
-        d="M0 0H459V46L416.856 64.6826C381.248 80.4672 341.482 84.2764 303.526 75.5383L269.153 67.6252C238.899 60.6602 207.358 61.6386 177.594 70.4652L129.031 84.8665C95.7234 94.7441 60.2685 94.7715 26.9452 84.9454L0 77V0Z"
-        fill="rgba(0,0,0,0.04)" />
-    </svg>
-    <div class="container">
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="#" class="nav__item__link">o mnie</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__item__link">projekty</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__item__link">kontakt</a>
-        </li>
-      </ul>
-      <button class="nav__more" id="more-btn">o mnie</button>
-      <div class="nav__modes">
-        <div class="nav__modes__icon">🌝</div>
-        <label for="trigger">
-          <input type="checkbox" name="trigger" class="nav__modes__trigger" id="trigger">
-          <div class="slider"></div>
-        </label>
-        <div class="nav__modes__icon">🌙</div>
+    <nav class="nav">
+      <svg
+        width="100%"
+        height="240px"
+        viewBox="0 0 459 93"
+        preserveAspectRatio="none"
+        class="my-svg"
+      >
+        <path
+          class="my-svg-path"
+          d="M0 0H459V46L416.856 64.6826C381.248 80.4672 341.482 84.2764 303.526 75.5383L269.153 67.6252C238.899 60.6602 207.358 61.6386 177.594 70.4652L129.031 84.8665C95.7234 94.7441 60.2685 94.7715 26.9452 84.9454L0 77V0Z"
+          fill="rgba(0,0,0,0.04)"
+        />
+      </svg>
+      <div class="container">
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="#about" class="nav__item__link">o mnie</a>
+          </li>
+          <li class="nav__item">
+            <a href="#portfolio-id" class="nav__item__link">projekty</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact-id" class="nav__item__link">kontakt</a>
+          </li>
+        </ul>
+        <button class="nav__more" id="more-btn">o mnie</button>
+        <div class="nav__modes">
+          <div class="nav__modes__icon">🌝</div>
+          <label for="trigger">
+            <input
+              type="checkbox"
+              name="trigger"
+              class="nav__modes__trigger"
+              id="trigger"
+            />
+            <div class="slider"></div>
+          </label>
+          <div class="nav__modes__icon">🌙</div>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- <div class="about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aspernatur modi fugiat
-        eum
-        sequi, perspiciatis veniam adipisci iste aperiam illum deserunt eaque voluptatem ducimus velit minima nesciunt
-        quod. Doloremque, quae?</div> -->
+    </nav>
 
-  <section class="section portfolio">
-    <div class="container">
-      <h1 class="section-title">Moje<br />projekty ></h1>
-      <ul class="portfolio__list">
-        <li class="portfolio__box">
-          <!-- <svg viewBox="0 0 459 147" fill="none" class="test">
-            <path
-              d="M0 0H459L426.628 138.009C424.857 145.556 414.463 146.426 411.462 139.278L395.303 100.781C378.942 61.802 324.183 60.5149 306.009 98.6817V98.6817C304.665 101.503 300.779 101.827 298.987 99.2669L289.12 85.1716C262.628 47.3252 205.097 52.3606 185.582 94.2338L164.12 140.285C160.368 148.336 148.764 147.863 145.679 139.533L119.696 69.3789C110.538 44.6523 75.8017 44.0019 65.7243 68.3682V68.3682C54.5859 95.2997 15.1337 90.8024 10.3425 62.055L0 0Z"
-              fill="#C4C4C4" fill-opacity="0.3" />
-          </svg> -->
+    <section class="section portfolio" id="portfolio-id">
+      <div class="container">
+        <h1 class="section-title">Moje<br />projekty ></h1>
+        <ul class="portfolio__list">
+          <li class="portfolio__box">
+            <!-- <svg viewBox="0 0 459 147" fill="none" class="test">
+              <path
+                d="M0 0H459L426.628 138.009C424.857 145.556 414.463 146.426 411.462 139.278L395.303 100.781C378.942 61.802 324.183 60.5149 306.009 98.6817V98.6817C304.665 101.503 300.779 101.827 298.987 99.2669L289.12 85.1716C262.628 47.3252 205.097 52.3606 185.582 94.2338L164.12 140.285C160.368 148.336 148.764 147.863 145.679 139.533L119.696 69.3789C110.538 44.6523 75.8017 44.0019 65.7243 68.3682V68.3682C54.5859 95.2997 15.1337 90.8024 10.3425 62.055L0 0Z"
+                fill="#C4C4C4"
+                fill-opacity="0.3"
+              />
+            </svg> -->
+            <span class="portfolio__box__title"
+              >Diet-Tracker<img
+                class="portfolio-box__title__img"
+                src="./img/diet.png"
+                alt=""
+            /></span>
 
-          <span class="portfolio__box__title">Diet-Tracker<img class="portfolio-box__title__img" src="./img/diet.png"
-              alt=""></span>
-          <p class="portfolio__box__description">
-            aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
-            api
-          </p>
-          <div class="portfolio__box__links">
-            <a href="https://github.com/adambien94/Fitpol" class="portfolio__box__link" target="_blank">github</a>
-            <span class="slash">/</span>
-            <a href="https://fitpol2000.firebaseapp.com/" class="portfolio__box__link" target="_blank">demo</a>
-          </div>
-        </li>
-        <li class="portfolio__box">
-          <span class="portfolio__box__title">RWD-Site<img class="portfolio-box__title__img" src="./img/rwd.png"
-              alt=""></span>
-          <p class="portfolio__box__description">
-            klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
-            nie wiedziała jak
-          </p>
-          <div class="portfolio__box__links">
-            <a href="https://github.com/adambien94/website-brandi" class="portfolio__box__link"
-              target="_blank">github</a>
-            <span class="slash">/</span>
-            <a href="https://adambien94.github.io/website-brandi/" class="portfolio__box__link" target="_blank">demo</a>
-          </div>
-        </li>
-        <li class="portfolio__box">
-          <span class="portfolio__box__title">Weather-App<img class="portfolio-box__title__img" src="./img/weather.png"
-              alt=""></span>
-          <p class="portfolio__box__description">
-            aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
-            api
-          </p>
-          <div class="portfolio__box__links">
-            <a href="https://github.com/adambien94/simple-weather-app" class="portfolio__box__link" target="_blank">
-              github</a>
-            <span class="slash">/</span>
-            <a href="https://adambien94.github.io/simple-weather-app/" class="portfolio__box__link" target="_blank">
-              demo</a>
-          </div>
-        </li>
-        <li class="portfolio__box">
-          <span class="portfolio__box__title">Brick-Breaker<img class="portfolio-box__title__img" src="./img/game2.png"
-              alt=""></span>
-          <p class="portfolio__box__description">
-            klasyczna gra stworzona za pomocą biblioteki p5.js, coś tu będzie
-          </p>
-          <div class="portfolio__box__links">
-            <a href="https://github.com/adambien94/brick-breaker-game" class="portfolio__box__link" target="_blank">
-              github</a>
-            <span class="slash">/</span>
-            <a href="https://adambien94.github.io/brick-breaker-game/" class="portfolio__box__link" target="_blank">
-              demo</a>
-          </div>
-        </li>
-        <li class="portfolio__box">
-          <span class="portfolio__box__title">Messenger-Soccer <img class="portfolio-box__title__img"
-              src="./img/soccer.png" alt=""></span>
-          <p class="portfolio__box__description">
-            klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
-            nie wiedziała jak
-          </p>
-          <div class="portfolio__box__links">
-            <a href="https://github.com/adambien94/FB-messenger-soccer-miniGame" class="portfolio__box__link"
-              target="_blank">github</a>
-            <span class="slash">/</span>
-            <a href="https://adambien94.github.io/FB-messenger-soccer-miniGame/" class="portfolio__box__link"
-              target="_blank">demo</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+            <p class="portfolio__box__description">
+              aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
+              api
+            </p>
+            <div class="portfolio__box__links">
+              <a
+                href="https://github.com/adambien94/Fitpol"
+                class="portfolio__box__link"
+                target="_blank"
+                >github</a
+              >
+              <span class="slash">/</span>
+              <a
+                href="https://fitpol2000.firebaseapp.com/"
+                class="portfolio__box__link"
+                target="_blank"
+                >demo</a
+              >
+            </div>
+          </li>
+          <li class="portfolio__box">
+            <span class="portfolio__box__title"
+              >RWD-Site<img
+                class="portfolio-box__title__img"
+                src="./img/rwd.png"
+                alt=""
+            /></span>
 
-  <section class="section contact">
-    <div class="container">
-      <h1 class="section-title">Namiary ></h1>
-      <ul class="contact__list">
-        <li class="contact__list__item">
-          <a href="" class="contact__list__item__link">github.com/adambien94</a>
-        </li>
-        <li class="contact__list__item">
-          <a href="" class="contact__list__item__link">linkedin.com/adambien</a>
-        </li>
-        <li class="contact__list__item">
-          <a href="" class="contact__list__item__link">panadam94@gmail.com</a>
-        </li>
-      </ul>
-    </div>
-  </section>
+            <p class="portfolio__box__description">
+              klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
+              nie wiedziała jak
+            </p>
+            <div class="portfolio__box__links">
+              <a
+                href="https://github.com/adambien94/website-brandi"
+                class="portfolio__box__link"
+                target="_blank"
+                >github</a
+              >
+              <span class="slash">/</span>
+              <a
+                href="https://adambien94.github.io/website-brandi/"
+                class="portfolio__box__link"
+                target="_blank"
+                >demo</a
+              >
+            </div>
+          </li>
+          <li class="portfolio__box">
+            <span class="portfolio__box__title"
+              >Weather-App<img
+                class="portfolio-box__title__img"
+                src="./img/weather.png"
+                alt=""
+            /></span>
 
-  <script src="./anime.min.js"></script>
-  <script src="main.js"></script>
-</body>
+            <p class="portfolio__box__description">
+              aplikacja do sprawdzania prognozy pogody, z wykorzystaniem REST
+              api
+            </p>
+            <div class="portfolio__box__links">
+              <a
+                href="https://github.com/adambien94/simple-weather-app"
+                class="portfolio__box__link"
+                target="_blank"
+              >
+                github</a
+              >
+              <span class="slash">/</span>
+              <a
+                href="https://adambien94.github.io/simple-weather-app/"
+                class="portfolio__box__link"
+                target="_blank"
+              >
+                demo</a
+              >
+            </div>
+          </li>
+          <li class="portfolio__box">
+            <span class="portfolio__box__title"
+              >Brick-Breaker<img
+                class="portfolio-box__title__img"
+                src="./img/game2.png"
+                alt=""
+            /></span>
 
+            <p class="portfolio__box__description">
+              klasyczna gra stworzona za pomocą biblioteki p5.js, coś tu będzie
+            </p>
+            <div class="portfolio__box__links">
+              <a
+                href="https://github.com/adambien94/brick-breaker-game"
+                class="portfolio__box__link"
+                target="_blank"
+              >
+                github</a
+              >
+              <span class="slash">/</span>
+              <a
+                href="https://adambien94.github.io/brick-breaker-game/"
+                class="portfolio__box__link"
+                target="_blank"
+              >
+                demo</a
+              >
+            </div>
+          </li>
+          <li class="portfolio__box">
+            <span class="portfolio__box__title"
+              >Messenger-Soccer
+              <img
+                class="portfolio-box__title__img"
+                src="./img/soccer.png"
+                alt=""
+            /></span>
+
+            <p class="portfolio__box__description">
+              klasyczna gra stworzona za pomocą biblioteki p5.js siała baba mak,
+              nie wiedziała jak
+            </p>
+            <div class="portfolio__box__links">
+              <a
+                href="https://github.com/adambien94/FB-messenger-soccer-miniGame"
+                class="portfolio__box__link"
+                target="_blank"
+                >github</a
+              >
+              <span class="slash">/</span>
+              <a
+                href="https://adambien94.github.io/FB-messenger-soccer-miniGame/"
+                class="portfolio__box__link"
+                target="_blank"
+                >demo</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact-id">
+      <div class="container">
+        <h1 class="section-title">Namiary ></h1>
+        <ul class="contact__list">
+          <li class="contact__list__item">
+            <a href="" class="contact__list__item__link"
+              >github.com/adambien94</a
+            >
+          </li>
+          <li class="contact__list__item">
+            <a href="" class="contact__list__item__link"
+              >linkedin.com/adambien</a
+            >
+          </li>
+          <li class="contact__list__item">
+            <a href="" class="contact__list__item__link">panadam94@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="./anime.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
