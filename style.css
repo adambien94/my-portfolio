@@ -10,21 +10,21 @@
   --main-font: rgba(0, 0, 0, 0.9);
   --lighter-font: rgba(0, 0, 0, 0.8);
   --heading: rgba(0, 0, 0, 0.85);
-  --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.05), #fff);
+  --contact-bg: linear-gradient(to right, rgba(119, 136, 153, 0.07), #fff);
   --shadow: rgba(0, 0, 0, 0.075);
   --body-bg: #fcfcfc;
   --box: #fff;
   --active-border: lightgray;
-  --contrast: rgba(0, 0, 0, 0.04);
+  --contrast: rgba(119, 136, 153, 0.07);
 }
 
 :root[data-theme="dark"] {
   --main-font: rgba(255, 255, 255, 0.9);
   --lighter-font: rgba(255, 255, 255, 0.75);
   --heading: rgba(255, 255, 255, 0.85);
-  --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.08), #1f2428);
+  --contact-bg: linear-gradient(to right, rgba(0, 0, 0, 0.08), #21262B);
   --shadow: rgba(0, 0, 0, 0);
-  --body-bg: #1f2428;
+  --body-bg: #21262B;
   --box: rgba(255, 255, 255, 0.05);
   --active-border: rgba(255, 255, 255, 0.2);
   --contrast: rgba(0, 0, 0, 0.08);
@@ -80,8 +80,9 @@ body {
   position: relative;
 }
 
+
 .nav__item:nth-child(1) .nav__item__link {
-  color: gray;
+  opacity: 0.4;
   text-decoration: line-through;
   pointer-events: none;
   cursor: default;
@@ -93,17 +94,24 @@ body {
   color: var(--main-font);
   position: absolute;
   display: block;
-  top: 3px;
+  top: -6px;
   right: -42px;
   font-size: 32px;
   font-weight: 100;
 }
 
 .nav__item__link {
+  display: inline-block;
   text-decoration: none;
   color: var(--main-font);
-  font-size: 32px;
-  font-weight: 100;
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: transform 0.2s;
+}
+
+.nav__item__link:hover {
+  transform: translateY(-1px);
 }
 
 .nav__item__link--active {
@@ -175,7 +183,7 @@ body {
   height: 19px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-out, box-shadow 0.05s;
   transition-delay: 0.1s;
   left: -1px;
@@ -256,6 +264,17 @@ input[name="trigger"]:focus+.slider:before {
 
 .portfolio__box__description {
   color: var(--lighter-font);
+  line-height: 32px;
+}
+
+.marker {
+  background: yellow;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0 6px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  transform: rotate(-2deg);
 }
 
 .portfolio__box__links {
@@ -269,11 +288,10 @@ input[name="trigger"]:focus+.slider:before {
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: lightslategray;
-  border-radius: 2px;
   font-weight: 400;
   padding: 3px 0px 6px 0px;
   transition: transform 0.15s;
+  color: lightslategray;
 }
 
 .slash {
@@ -322,6 +340,7 @@ input[name="trigger"]:focus+.slider:before {
   top: 50%;
   transform: translate(-100%, -50%);
   transition: opacity 0.15s, transform 0.15s;
+  font-weight: 400;
 }
 
 .contact__list__item__link:hover:before {
@@ -397,12 +416,12 @@ input[name="trigger"]:focus+.slider:before {
   }
 
   .portfolio__box__links {
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .portfolio__box__link {
     font-size: 19px;
-    padding: 5px 0px 8px 0px;
+    padding: 5px px 8px px;
   }
 
   .contact {
@@ -415,6 +434,6 @@ input[name="trigger"]:focus+.slider:before {
   }
 
   .contact__list__item__link {
-    font-size: 21px;
+    font-size: 23px;
   }
 }
